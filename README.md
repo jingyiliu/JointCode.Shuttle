@@ -1,5 +1,5 @@
 # JointCode.Shuttle
-JointCode.Shuttle is a fast, flexible and easy-to-use service framework for inter-AppDomain communication. It's a replacement for MarshalByrefObject which is provided by the runtime libraries. Functionalities including:
+JointCode.Shuttle is a fast, flexible and easy-to-use service framework for inter-AppDomain communication. It's a replacement for MarshalByrefObject which is provided by the runtime libraries. Functionalities including:<br>
 
 1. Service (interface) oriented.
 2. Access any AppDomain service from an AppDomain.
@@ -12,8 +12,9 @@ JointCode.Shuttle is a fast, flexible and easy-to-use service framework for inte
 9. Simple and quick to get started.
 10. Support .net 2.0.
 
-A simple sample
+### A simple sample
 This example is also available as a stand-alone integration test:
+
 using System;
 using System.Reflection;
 using System.Reflection.Emit;
