@@ -4,7 +4,7 @@
 1. Service (interface) oriented.
 2. Access services registered in any AppDomain from an AppDomain.
 3. Better performance: 60 ~ 70 faster than MarshalByrefObject.
-4. Service is manageable: you can dynamically register / unregister service group.
+4. Services are manageable: you can dynamically register / unregister service group.
 5. Strong type, easy to use (while the MarshalByrefObject way relies on magic string to find the service type).
 6. Built-in IoC functionality for automatic service dependencies management.
 7. Supports for lazy type / assembly loading.
