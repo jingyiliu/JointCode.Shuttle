@@ -15,7 +15,7 @@
 ### A simple sample
 This example is also available as a stand-alone integration test:
 
-```
+```cs
 using System;
 using System.Reflection;
 using System.Reflection.Emit;
