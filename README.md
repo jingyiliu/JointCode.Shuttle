@@ -13,10 +13,10 @@
 10. Support .net 2.0.
 
 ### Limitations (Currently)
-    Only supports 32-bit applications (x86 target platforms)
-    Only supports Windows (currently only supports .net framework, does not support mono)
-    No support for AppDomain events
-    Not thoroughly tested
+1. Only supports 32-bit applications (x86 target platforms)
+2. Only supports Windows (currently only supports .net framework, does not support mono)
+3. No support for AppDomain events
+4. Not thoroughly tested
 
 ### A simple sample
 This example is also available as a stand-alone integration test:
