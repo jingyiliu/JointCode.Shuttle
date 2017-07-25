@@ -118,9 +118,9 @@ namespace JoitCode.Shuttle.SimpleSample
         {
             // 要使用 JointCode.Shuttle 进行跨 AppDomain 通信，首先必须初始化 ShuttleDomain。
             // 这个初始化操作一般在默认 AppDomain 执行，但也可以在其他 AppDomain 中执行，都是一样的。
-            // To be able to make inter-AppDomain communication using JointCode.Shuttle, firstly we must initialize the ShuttleDomain.
-            // It does not matter whether the initialization operation is done in default AppDomain or any other AppDomains, but it must 
-            // be done before we creating any ShuttleDomain instances.
+            // To be able to make inter-AppDomain communication with JointCode.Shuttle, firstly we must initialize the ShuttleDomain.
+            // It doesn't matter whether the initialization operation is done in default AppDomain or any other AppDomains, but it must 
+            // be done before any ShuttleDomain instance is created.
             ShuttleDomain.Initialize();
 
             // 在默认 AppDomain 中创建一个子 AppDomain。
@@ -128,7 +128,7 @@ namespace JoitCode.Shuttle.SimpleSample
             var serviceEnd1Domain = AppDomain.CreateDomain("ServiceEndDomain1", null, null);
 
             // 创建一个 ServiceProvider 对象以用于操作该子 AppDomain。
-            // Creating a ServiceProvider instance for operating that AppDomain.
+            // Creating a ServiceProvider instance for operating that child AppDomain.
             var serviceProvider = (ServiceProvider)serviceEnd1Domain.CreateInstanceAndUnwrap
                 (typeof(Program).Assembly.FullName, "JoitCode.Shuttle.SimpleSample.ServiceProvider");
 
@@ -145,7 +145,7 @@ namespace JoitCode.Shuttle.SimpleSample
             // 该对象用于与其他 AppDomain 中的 ShuttleDomain 对象通信。
             // Creating a ShuttleDomain instance in default AppDomain.
             // Actually, we needs to create one and only one ShuttleDomain instance in every AppDomains.
-            // The ShuttleDomain instance communicates with other ShuttleDomain instances in other AppDomains.
+            // The ShuttleDomain instances communicates with each other across AppDomains.
             var str = Guid.NewGuid().ToString();
             var shuttleDomain = ShuttleDomainHelper.Create(str, str);
 
@@ -186,15 +186,15 @@ namespace JoitCode.Shuttle.SimpleSample
             // 此为可选操作，因为即使不手动释放 ISimpleService 服务实例，在其生命期结束之时系统也会自动释放该实例
             //（如果 ISimpleService 实现了 IDisposable，还会调用其 Dispose 方法）
             // Indicate the child AppDomain to release the ISimpleService service immediately, instead of waiting for its lifetime to end.
-            // This is optional, because even if we do not do this explicitly, the ISimpleService service will still get released in the 
+            // This is optional, because even if we don't do this explicitly, the ISimpleService service will still get released in the 
             // child AppDomain automatically when its lifetime ends.
             // And, if the ISimpleService derives from IDisposable, the Dispose method will also get called at that time.
             shuttleDomain.ReleaseService(service);
 
             // 在子 AppDomain 中，释放缓存的 ShuttleDomain 实例。这将会注销通过该实例注册的所有服务（在本示例中，即 ISimpleService 服务），
             // 并切断该 AppDomain 与所有 AppDomain 的通信。
-            // Releasing the ShuttleDomain instance in the child AppDomain, this will unregister all services registered by that instance,
-            // and shut down all communications with all AppDomains.
+            // Releasing the ShuttleDomain instance in the child AppDomain, this will unregister all services registered by that 
+            // instance, and shut down all communications between that child AppDomain and all other AppDomains.
             serviceProvider.DisposeShuttleDomain();
 
             Console.Read();
