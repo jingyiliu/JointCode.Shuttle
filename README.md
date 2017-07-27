@@ -19,8 +19,9 @@
 4. Not thoroughly tested
 
 ### References
-[Improve cross-AppDomain communication using JointCode.Shuttle](https://www.codeproject.com/Articles/1198500/Improve-cross-AppDomain-communication-using-JointC)
-[JointCode.Shuttle, a fast, flexible and easy-to-use service-oriented framework for cross-AppDomain communication](https://www.codeproject.com/Articles/1198230/JointCode-Shuttle-a-fast-flexible-and-easy-to-use)
+1. [JointCode.Shuttle, a fast, flexible and easy-to-use service-oriented framework for cross-AppDomain communication](https://www.codeproject.com/Articles/1198230/JointCode-Shuttle-a-fast-flexible-and-easy-to-use)
+2. [Improve cross-AppDomain communication using JointCode.Shuttle](https://www.codeproject.com/Articles/1198500/Improve-cross-AppDomain-communication-using-JointC)
+
 
 ### A simple sample
 This example is also available as a stand-alone integration test:
