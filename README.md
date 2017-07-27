@@ -15,7 +15,7 @@
 ### Limitations (Currently)
 1. Only supports 32-bit applications (x86 target platforms)
 2. Only supports Windows (only supports for .net framework, no mono support at this time)
-3. No support for AppDomain events
+3. No support for cross-AppDomain events
 4. Not thoroughly tested
 
 ### References
