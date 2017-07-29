@@ -81,7 +81,7 @@ namespace JoitCode.Shuttle.SimpleSample
             var str = Guid.NewGuid().ToString();
             var shuttleDomain = ShuttleDomainHelper.Create(str, str);
 
-            if (CallServicesDefineInThisAssembly(shuttleDomain) 
+            if (CallServicesDefinedInThisAssembly(shuttleDomain) 
                 && CallServicesDefinedInAnotherAssembly(shuttleDomain))
             {
                 Console.WriteLine("Tests completed...");
@@ -96,7 +96,7 @@ namespace JoitCode.Shuttle.SimpleSample
             Console.Read();
         }
 
-        static bool CallServicesDefineInThisAssembly(ShuttleDomain shuttleDomain)
+        static bool CallServicesDefinedInThisAssembly(ShuttleDomain shuttleDomain)
         {
             Console.WriteLine();
             Console.WriteLine("=====================================");
