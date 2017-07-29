@@ -1,2 +1,7 @@
 bin/
 obj/
+JoitCode.Shuttle.Sample.ServiceEnd2/JoitCode.Shuttle.Sample.ServiceEnd22.csproj
+JoitCode.Shuttle.Sample.ServiceEnd1/JoitCode.Shuttle.Sample.ServiceEnd12.csproj
+JoitCode.Shuttle.Sample/JoitCode.Shuttle.Sample2.csproj
+JoitCode.Shuttle.Sample.Contract/JoitCode.Shuttle.Sample.Contract2.csproj
+JoitCode.Shuttle.SimpleSample/JoitCode.Shuttle.SimpleSample2.csproj

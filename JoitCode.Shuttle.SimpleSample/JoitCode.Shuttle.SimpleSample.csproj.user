@@ -2,6 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
-    <StartWorkingDirectory>F:\Projects\JointCode\JointCode.Shuttle.Unsplitted\trunk\JoitCode.Shuttle.Sample\JoitCode.Shuttle.SimpleSample\bin\Debug</StartWorkingDirectory>
+    <StartWorkingDirectory>F:\Projects\JointCode\JointCode.Shuttle.Unsplitted\trunk\JoitCode.Shuttle.Samples\JoitCode.Shuttle.SimpleSample\bin\Debug\</StartWorkingDirectory>
   </PropertyGroup>
 </Project>
